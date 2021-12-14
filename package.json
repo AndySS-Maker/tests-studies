@@ -5,17 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "test:debug": "ndb jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@types/jest": "^27.0.3",
     "babel-jest": "^27.4.2",
+    "dinero.js": "^1.9.1",
     "jest": "^27.4.3",
     "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "ndb": "^1.1.5"
   }
 }
