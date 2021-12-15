@@ -32,12 +32,6 @@ export default class Cart {
         discount = calculateDiscount(amount, quantity, condition);
       }
 
-      //   if (item.condition?.percentage) {
-      //     discount = calculatePercentageDiscount(amount, item);
-      //   } else if (item.condition?.quantity) {
-      //     discount = calculateQuantityDiscount(amount, item);
-      //   }
-
       return acc.add(amount).subtract(discount);
     }, Money({ amount: 0 }));
   }

@@ -88,7 +88,29 @@ describe('Multiplication betweeen two numbers', () => {
 });
 
 describe('Division between two numbers', () => {
-    it('should divide 2 and 2 and the result must be 1', () => {
-      expect(div(2, 2)).toBe(1);
-    });
-})
+  it('should divide 2 and 2 and the result must be 1', () => {
+    expect(div(2, 2)).toBe(1);
+  });
+
+  it('should divide 2 and 2 even if one of them is a string and the result must be 1', () => {
+    expect(div('2', '2')).toBe(1);
+  });
+
+  it('should throw an error if what is provided to the method cannot be divided', () => {
+    expect(() => {
+      div('', 2);
+    }).toThrowError();
+
+    expect(() => {
+      div([2, 2]);
+    }).toThrowError();
+
+    expect(() => {
+      div({});
+    }).toThrowError();
+
+    expect(() => {
+      div();
+    }).toThrowError();
+  });
+});

@@ -25,7 +25,7 @@ describe('Cart', () => {
     it('should multiply quantity and price and receive the total amount', () => {
       const item = {
         product,
-        quantity: 2, // 70776
+        quantity: 2,
       };
 
       cart.add(item);
